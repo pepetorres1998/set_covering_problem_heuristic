@@ -16,7 +16,7 @@ class Station:
 
     def set_cities(self):
         """ Set Station cities that are closer than 15 minutes """
-        return [x for x in range(len(self.distances)) if self.distances[x] > 15]
+        return [x for x in range(len(self.distances)) if self.distances[x] <= 15]
 
     def city_location(self):
         return [x for x in range(len(self.distances)) if self.distances[x] == 0][0]
